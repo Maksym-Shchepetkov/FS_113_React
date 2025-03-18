@@ -1,29 +1,22 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import React from 'react';
+import Footer from './components/Footer/Footer';
+import HelloSection from './components/HelloSection/HelloSection';
+import Header from './components/Header/Header';
+import Message from './components/Message/Message';
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
+  const age = 18;
+  const isAdult = age > 18 ? <h2>Hello</h2> : <h2>Bye</h2>;
   return (
     <>
-      <div>
-        <a href='https://vite.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
-      </div>
+      <Header />
+      {isAdult}
 
-      <div className='card'>
-        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-      </div>
-
-      <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
+      <Message author='Alex' text='Продам праску!' isOnline={true} />
+      <Message author='Olena' text='Куплю хотдог!' isOnline={false} />
+      <Message author='Ihor' text='Привіт!' isOnline />
     </>
   );
-}
+};
 
 export default App;

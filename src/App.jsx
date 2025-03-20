@@ -5,6 +5,8 @@ import Item from './components/Item/Item';
 import StyledSection from './components/StyledSection/StyledSection';
 import Modal from './components/Modal/Modal';
 import Button from './components/Button/Button';
+import fridge from './assets/fridge.png';
+import s from './App.module.css';
 const App = () => {
   return (
     <>
@@ -36,7 +38,7 @@ const App = () => {
       </Modal>
       <section>
         <Message author='Alex' text='Продам праску!' isOnline={true} />
-        <Message author='Olena' text='Куплю хотдог!' isOnline={false} />
+        <Message author='Olena' text='Куплю ' isOnline={false} />
         <Message author='Ihor' text='Привіт!' isOnline />
       </section>
 
@@ -46,6 +48,13 @@ const App = () => {
         ))}
       </ul>
       <StyledSection />
+      <img src={fridge} />
+
+      <div className={s.flex}>
+        <div className={s.box}></div>
+        <div className={s.box}></div>
+        <div className={s.boxRed}></div>
+      </div>
     </>
   );
 };

@@ -1,0 +1,23 @@
+.box{
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  &:hover{
+    background-color: gold;
+    box-shadow: 0 0 10px 10px gray;
+  }
+}
+.flex{
+  display: flex;
+  gap: 20px;
+  padding: 100px;
+}
+.boxRed{
+ composes: box;
+ background-color: red;
+ width: 300px;
+ &:hover{
+  box-shadow: 0 0 10px 10px red;
+
+ }
+}

@@ -9,7 +9,20 @@
   padding: 20px;
   color: white;
   background-color: blue;
+  nav {
+    ul {
+      li{
+        color: pink;
+        &:hover{
+          color:red;
+        }
+      }
+    }
+  }
 }
+
+
+
 .list{
   list-style: none;
   display: flex;

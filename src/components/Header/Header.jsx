@@ -4,9 +4,9 @@ const Header = () => {
       <div>Logo</div>
       <nav>
         <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
+          <li>Home</li>
+          <li>About</li>
+          <li>Profile</li>
         </ul>
       </nav>
     </header>

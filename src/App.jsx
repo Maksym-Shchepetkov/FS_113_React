@@ -13,7 +13,7 @@ const App = () => {
       <Button variant='outline'>Click</Button>
       <Button variant='xl'>Submit</Button>
 
-      <h2>Styles in React</h2>
+      <h2 className='title'>Styles in React</h2>
       <Modal>
         <p className=''>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolore at molestiae cumque excepturi atque ullam magnam ipsam explicabo

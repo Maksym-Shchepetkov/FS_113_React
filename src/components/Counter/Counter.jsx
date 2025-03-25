@@ -2,6 +2,11 @@ import { useState } from 'react';
 import s from './Counter.module.css';
 
 export const Counter = () => {
+  //1. Хуки мають викликатись лише в функціональному компоненті
+  //2. Хуки не можна викликати по умові
+  //3. Хуки не можна викликати в циклах
+  //4. Не можна хуки викликати за межами компонента
+
   const [counter, setCounter] = useState(1);
   const [step, setStep] = useState(10);
 
@@ -16,6 +21,7 @@ export const Counter = () => {
     setCounter(0);
     setStep(1);
   };
+  console.log('render');
 
   return (
     <div className={s.flexContainer}>
@@ -23,7 +29,7 @@ export const Counter = () => {
         <h1>{counter}</h1>
         <input value={step} type='number' onChange={e => setStep(+e.target.value)} />
         <div className={s.flex}>
-          <button onClick={handleMinusClick} className='btn'>
+          <button className='btn' onClick={handleMinusClick}>
             minus
           </button>
           <button onClick={handleResetClick} className='btn'>

@@ -1,22 +1,32 @@
+import { useState } from 'react';
 import s from './Counter.module.css';
 
 export const Counter = () => {
-  const handlePlusClick = e => {
-    console.log(e);
+  const [counter, setCounter] = useState(1);
+  const [step, setStep] = useState(10);
+
+  const handlePlusClick = () => {
+    setCounter(counter + step);
+    // console.log(counter);
   };
-  const sayHello = name => {
-    console.log(`Hello , ${name}`);
+  const handleMinusClick = () => {
+    setCounter(counter - step);
+  };
+  const handleResetClick = () => {
+    setCounter(0);
+    setStep(1);
   };
 
   return (
     <div className={s.flexContainer}>
       <div className={s.wrapper}>
-        <h1>{1}</h1>
+        <h1>{counter}</h1>
+        <input value={step} type='number' onChange={e => setStep(+e.target.value)} />
         <div className={s.flex}>
-          <button onClick={() => console.log('Click!')} className='btn'>
+          <button onClick={handleMinusClick} className='btn'>
             minus
           </button>
-          <button onClick={() => sayHello('Ihor')} className='btn'>
+          <button onClick={handleResetClick} className='btn'>
             reset
           </button>
           <button onClick={handlePlusClick} className='btn'>

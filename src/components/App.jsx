@@ -1,11 +1,12 @@
 import { ColorPicker } from './ColorPicker/ColorPicker';
 import { Counter } from './Counter/Counter';
+import Header from './Header/Header';
 import { TodoList } from './TodoList/TodoList';
 
 const App = () => {
   return (
     <div>
-      <h1>State</h1>
+      <Header />
       <Counter />
       <ColorPicker />
       <TodoList />

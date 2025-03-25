@@ -10,7 +10,7 @@ const App = () => {
       <Header />
       {/* <Counter /> */}
       {/* <ColorPicker /> */}
-      <Voting />
+      {/* <Voting /> */}
       <TodoList />
     </div>
   );

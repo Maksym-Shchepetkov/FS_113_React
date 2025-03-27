@@ -18,6 +18,7 @@ const Modal = ({ children, title = 'Default modal', onClose }) => {
     const intervalID = setInterval(() => {
       console.log(new Date().toLocaleTimeString());
     }, 1000);
+
     const timeoutID = setTimeout(() => {
       console.log('Бадабум!');
     }, 4000);

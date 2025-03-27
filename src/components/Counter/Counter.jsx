@@ -10,6 +10,12 @@ export const Counter = () => {
     console.log('Лічильник запущено');
   }, []);
 
+  // useEffect(() => {
+  //   // console.log('Що-небудь');
+  //   setCounter(counter + 1);
+  //   console.log(counter);
+  // });
+
   // 2. Виконається перший раз (при монтуванні) і всі наступні рази при зміні каунтера!
   useEffect(() => {
     if (counter === 0) {

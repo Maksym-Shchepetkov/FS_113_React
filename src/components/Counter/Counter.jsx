@@ -2,11 +2,6 @@ import { useState } from 'react';
 import s from './Counter.module.css';
 
 export const Counter = () => {
-  //1. Хуки мають викликатись лише в функціональному компоненті
-  //2. Хуки не можна викликати по умові
-  //3. Хуки не можна викликати в циклах
-  //4. Не можна хуки викликати за межами компонента
-
   const [counter, setCounter] = useState(1);
   const [step, setStep] = useState(10);
 

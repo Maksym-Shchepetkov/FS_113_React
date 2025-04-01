@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import s from './Forms.module.css';
-const ControlledForm = () => {
+const ControlledForm = ({ register }) => {
   const [values, setValues] = useState({
     username: '',
     email: '',
@@ -29,7 +29,8 @@ const ControlledForm = () => {
     //     break;
     // }
 
-    setValues({ ...values, [name]: value });
+    setValues({ ...values, [e.target.name]: e.target.value });
+
     // setValues({ ...values, username: value });
     // setValues({ ...values, email: value });
   };

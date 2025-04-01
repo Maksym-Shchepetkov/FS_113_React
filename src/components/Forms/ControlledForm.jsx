@@ -4,31 +4,27 @@ const ControlledForm = ({ register }) => {
   const [values, setValues] = useState({
     username: '',
     email: '',
+    age: '',
+    summary: '',
+    label: '',
+    role: 'fullstack',
+    accept: false,
   });
   const handleSubmit = e => {
     e.preventDefault();
+    register(values);
   };
 
-  // const handleChangeName = e => {
-  //   setValues({ ...values, username: e.target.value });
-  // };
-
-  // const handleChangeEmail = e => {
-  //   setValues({ ...values, email: e.target.value });
-  // };
-  // DRY
   const handleChangeInput = e => {
-    const { name, value } = e.target;
-    console.log(name, value);
-    // switch (name) {
-    //   case 'username':
-    //     return setValues({ ...values, username: value });
-    //   case 'email':
-    //     return setValues({ ...values, email: value });
-    //   default:
-    //     break;
-    // }
+    // const { name, value } = e.target;
+    // console.log(name, value);
 
+    if (e.target.type === 'checkbox') {
+      setValues({ ...values, [e.target.name]: e.target.checked });
+      return;
+    }
+
+    console.log('IS NOT CHECKBOX');
     setValues({ ...values, [e.target.name]: e.target.value });
 
     // setValues({ ...values, username: value });
@@ -46,8 +42,44 @@ const ControlledForm = ({ register }) => {
           <span>Email:</span>
           <input onChange={handleChangeInput} value={values.email} className={s.input} name='email' placeholder='Enter the email:' />
         </label>
+        <label className={s.label}>
+          <span>Age:</span>
+          <input onChange={handleChangeInput} value={values.age} className={s.input} name='age' type='number' placeholder='Enter the age:' />
+        </label>
+        <label className={s.label}>
+          <span>Summary:</span>
+          <textarea onChange={handleChangeInput} value={values.summary} className={s.input} name='summary' placeholder='Enter the summary:' />
+        </label>
 
-        <button className={s.button}>Register</button>
+        <label className={s.label}>
+          <span>Label:</span>
+          <select onChange={handleChangeInput} value={values.label} className={s.input} name='label'>
+            <option value='junior'>junior</option>
+            <option value='middle'>middle</option>
+            <option value='senior'>senior</option>
+          </select>
+        </label>
+
+        <div>
+          <label>
+            <input type='radio' checked={values.role === 'backend'} onChange={handleChangeInput} name='role' value='backend' /> Backend
+          </label>
+          <label>
+            <input type='radio' checked={values.role === 'frontend'} onChange={handleChangeInput} name='role' value='frontend' /> Frontend
+          </label>
+          <label>
+            <input type='radio' checked={values.role === 'fullstack'} onChange={handleChangeInput} name='role' value='fullstack' /> Fullstack
+          </label>
+          <label>
+            <input type='radio' checked={values.role === 'devOps'} onChange={handleChangeInput} name='role' value='devOps' /> DevOps
+          </label>
+        </div>
+        <label>
+          <input type='checkbox' checked={values.accept} name='accept' onChange={handleChangeInput} />I want to see this webinar
+        </label>
+        <button disabled={!values.accept} className={s.button}>
+          Register
+        </button>
       </form>
     </section>
   );

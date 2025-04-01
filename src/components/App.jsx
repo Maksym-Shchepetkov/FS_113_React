@@ -1,3 +1,4 @@
+import ControlledForm from './Forms/ControlledForm';
 import UncontrolledForm from './Forms/UncontrolledForm';
 import Header from './Header/Header';
 
@@ -15,7 +16,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <UncontrolledForm register={register} />
+      <ControlledForm register={register} />
     </>
   );
 };

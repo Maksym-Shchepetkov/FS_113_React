@@ -1,6 +1,8 @@
 import ControlledForm from './Forms/ControlledForm';
 import UncontrolledForm from './Forms/UncontrolledForm';
 import Header from './Header/Header';
+import Test from './test/Test';
+import UseIdExample from './UseIdExample/UseIdExample';
 
 const App = () => {
   const register = credentials => {
@@ -17,7 +19,9 @@ const App = () => {
   return (
     <>
       <Header />
-      <ControlledForm register={register} />
+      {/* <ControlledForm register={register} /> */}
+      {/* <UseIdExample /> */}
+      <Test />
     </>
   );
 };

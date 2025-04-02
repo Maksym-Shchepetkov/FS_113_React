@@ -4,6 +4,12 @@ const UseIdExample = () => {
   return (
     <div>
       <CustomInput />
+      <CustomInput />
+      <CustomInput />
+      <CustomInput />
+      <CustomInput />
+      <CustomInput />
+      <CustomInput />
     </div>
   );
 };

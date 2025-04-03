@@ -40,7 +40,7 @@ const ApplyForm = () => {
             <span>Pet age:</span>
             <Field name='petAge' placeholder='Pet age' type='number' />
           </label>
-          <div>
+          <div className={s.gender}>
             <label>
               <Field name='petGender' type='radio' value='male' /> Male
             </label>

@@ -1,3 +1,4 @@
+import ApplyForm from './Forms/ApplyForm';
 import RegisterFormikForm from './Forms/RegisterFormikForm';
 import Header from './Header/Header';
 
@@ -16,7 +17,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <RegisterFormikForm />
+      <ApplyForm />
     </>
   );
 };

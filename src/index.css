@@ -2,7 +2,13 @@ body {
   font-family: sans-serif;
   line-height: 1.5;
 }
-
+.error{
+  color:red;
+  font-size: 14px;
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+}
 header{
   padding: 20px;
   background-color: black;

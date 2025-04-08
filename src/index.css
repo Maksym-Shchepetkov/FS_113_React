@@ -29,6 +29,20 @@ p {
   margin: 0;
 }
 
+
+.list{
+  display: flex;
+  gap:20px;
+  flex-direction: column;
+  li {
+    list-style: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+
+  }
+}
+
 ul,
 ol {
   margin: 0;
@@ -69,7 +83,7 @@ img {
 	background-color: white;
 	transition: all 0.2s ease-in-out;
 	cursor: pointer;
-  font-size: 2rem;
+  font-size: 1rem;
   border: 1px solid black;
 
 	&:hover {

@@ -1,9 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function UseRefRenderCountExample() {
   const [count, setCount] = useState(0);
   const [value, setValue] = useState('');
 
+  const countRenderRef = useRef(0);
+
+  useEffect(() => {
+    countRenderRef.current++;
+    console.log(countRenderRef.current);
+  });
   return (
     <div>
       <h2>useRef - Count of Renders</h2>

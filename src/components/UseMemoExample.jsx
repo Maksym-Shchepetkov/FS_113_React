@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 function UseMemoExample() {
   const [count, setCount] = useState(0);
@@ -12,7 +12,9 @@ function UseMemoExample() {
     return num * num;
   };
 
-  const result = heavyCompute(count);
+  const result = useMemo(() => {
+    return heavyCompute(count); // 234 , [{}], []
+  }, [count]);
 
   const style = {
     color: colored ? 'tomato' : 'black',

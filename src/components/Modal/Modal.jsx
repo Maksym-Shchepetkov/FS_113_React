@@ -1,12 +1,15 @@
 import { useEffect } from 'react';
 import s from './Modal.module.css';
+import useKeyDown from '../hooks/useKeyDown';
 const Modal = ({ children, title = 'Default modal', onClose }) => {
   const handleBackdropClick = e => {
     if (e.target === e.currentTarget) {
       onClose();
     }
   };
-
+  useKeyDown(() => {
+    console.log('magic');
+  }, 'b');
   useEffect(() => {
     const handleKeyDown = e => {
       if (e.key === 'Escape') onClose();

@@ -4,10 +4,9 @@ const SearchBar = ({ handleChangeQuery }) => {
   const initialValues = {
     query: '',
   };
-  const handleSubmit = (values, options) => {
+  const handleSubmit = values => {
     console.log(values);
     handleChangeQuery(values.query);
-    options.resetForm();
   };
   return (
     <section>

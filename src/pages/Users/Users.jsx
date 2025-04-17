@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { fetchUsers } from '../../services/api';
-import List from '../../components/List/LIst';
+import List from '../../components/List/List';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import { useLocation, useSearchParams } from 'react-router-dom';
 

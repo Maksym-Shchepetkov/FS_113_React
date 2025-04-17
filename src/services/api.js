@@ -6,7 +6,7 @@ export const fetchHits = async (query, page, hitsPerPage, signal) => {
 };
 
 export const fetchUsers = async () => {
-  const response = await axios.get('https://dummyjson.com/users');
+  const response = await axios.get('https://dummyjson.com/users?limit=200');
   return response.data.users;
 };
 export const fetchUserById = async userId => {

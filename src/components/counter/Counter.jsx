@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import s from './Counter.module.css';
 import { changeStep, decrement, increment, reset } from '../../redux/actions';
 
+console.log();
 export const Counter = () => {
   const counter = useSelector(state => state.counter.counter);
   const step = useSelector(state => state.counter.step);

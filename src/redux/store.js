@@ -6,5 +6,5 @@ export const store = configureStore({
   reducer: {
     counter: counterReducer,
   },
-  devTools: import.meta.env.MODE === 'development' ? true : false,
+  devTools: import.meta.env.MODE === 'development',
 });
